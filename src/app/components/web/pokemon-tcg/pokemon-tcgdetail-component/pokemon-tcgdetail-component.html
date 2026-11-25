@@ -1,0 +1,24 @@
+@if (resourcePokemon.isLoading()){
+  <div class="d-flex justify-content-center py-5 align-items-center">
+    <div class="spinner-border table-danger">
+      <span class="visually-hidden">Cargando cartas...</span>
+    </div>
+  </div>
+} @else if (resourcePokemon.error()){
+  <div class="alert alert-danger p-4">Error al abrir los sobres de cartas!!!</div>
+} @else {
+  @if (resourcePokemon.value(); as poke){
+
+    <div class="row">
+      <div class="col-12 col-md-5 col-lg-4">
+        <div class="card shadow rounded-4 overflow-hidden bg-white">
+          <div class="p-3 bg-body-secondary text-center">
+            <img [src]="poke.images.large" [alt]="poke.name" class="img-fluid rounded-3 shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  }
+
+}

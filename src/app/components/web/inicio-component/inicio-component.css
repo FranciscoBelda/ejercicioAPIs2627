@@ -1,0 +1,15 @@
+img{
+  height: 20vh;
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  border: solid black 2px;
+  cursor: pointer;
+}
+
+img{
+  transition-duration: 0.4s;
+  border: solid transparent 2px;
+}
